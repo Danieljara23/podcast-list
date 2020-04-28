@@ -32,8 +32,8 @@ const Layout = ({ children, title }) => {
     <div css={layoutStyles}>
       <NextNprogress
         color="#29D"
-        startPosition="0"
-        stopDelayMs="0"
+        startPosition={0}
+        stopDelayMs={0}
         height="5"
       />
       <Head>

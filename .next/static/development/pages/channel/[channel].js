@@ -1,4 +1,4 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/index.js"],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/channel/[channel].js"],{
 
 /***/ "./components/ChannelGrid.js":
 /*!***********************************!*\
@@ -233,6 +233,51 @@ var Layout = function Layout(_ref3) {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Layout);
+
+/***/ }),
+
+/***/ "./components/PodcastList.js":
+/*!***********************************!*\
+  !*** ./components/PodcastList.js ***!
+  \***********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _emotion_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @emotion/core */ "./node_modules/@emotion/core/dist/core.browser.esm.js");
+var _this = undefined,
+    _jsxFileName = "/home/daniel/Documentos/Next-course/podcasts/components/PodcastList.js";
+
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+var PodcastList = function PodcastList(_ref) {
+  var audioClips = _ref.audioClips,
+      onClickPodcast = _ref.onClickPodcast;
+  return audioClips.map(function (clip) {
+    return Object(_emotion_core__WEBPACK_IMPORTED_MODULE_2__["jsx"])("a", {
+      href: "/podcast/".concat(clip.id),
+      onClick: function onClick(e) {
+        return onClickPodcast(e, clip);
+      },
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 6,
+        columnNumber: 9
+      }
+    }, " ", clip.title, " ");
+  });
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (PodcastList);
 
 /***/ }),
 
@@ -2864,23 +2909,6 @@ module.exports = bind.call(Function.call, Object.prototype.hasOwnProperty);
 
 /***/ }),
 
-/***/ "./node_modules/isomorphic-fetch/fetch-npm-browserify.js":
-/*!***************************************************************!*\
-  !*** ./node_modules/isomorphic-fetch/fetch-npm-browserify.js ***!
-  \***************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-// the whatwg-fetch polyfill installs the fetch() function
-// on the global object (window or self)
-//
-// Return that as the export for use in Webpack, Browserify etc.
-__webpack_require__(/*! whatwg-fetch */ "./node_modules/next/dist/build/polyfills/fetch/whatwg-fetch.js");
-module.exports = self.fetch.bind(self);
-
-
-/***/ }),
-
 /***/ "./node_modules/native-url/dist/index.js":
 /*!***********************************************!*\
   !*** ./node_modules/native-url/dist/index.js ***!
@@ -2891,18 +2919,6 @@ module.exports = self.fetch.bind(self);
 var e,t=(e=__webpack_require__(/*! querystring */ "./node_modules/querystring-es3/index.js"))&&"object"==typeof e&&"default"in e?e.default:e,r=/https?|ftp|gopher|file/;function o(e){"string"==typeof e&&(e=g(e));var o=function(e,t,r){var o=e.auth,a=e.hostname,s=e.protocol||"",c=e.pathname||"",h=e.hash||"",p=e.query||"",n=!1;o=o?encodeURIComponent(o).replace(/%3A/i,":")+"@":"",e.host?n=o+e.host:a&&(n=o+(~a.indexOf(":")?"["+a+"]":a),e.port&&(n+=":"+e.port)),p&&"object"==typeof p&&(p=t.encode(p));var l=e.search||p&&"?"+p||"";return s&&":"!==s.substr(-1)&&(s+=":"),e.slashes||(!s||r.test(s))&&!1!==n?(n="//"+(n||""),c&&"/"!==c[0]&&(c="/"+c)):n||(n=""),h&&"#"!==h[0]&&(h="#"+h),l&&"?"!==l[0]&&(l="?"+l),{protocol:s,host:n,pathname:c=c.replace(/[?#]/g,encodeURIComponent),search:l=l.replace("#","%23"),hash:h}}(e,t,r);return""+o.protocol+o.host+o.pathname+o.search+o.hash}var a="http://",s="w.w",c=a+s,h=/^([a-z0-9.+-]*:\/\/\/)([a-z0-9.+-]:\/*)?/i,p=/https?|ftp|gopher|file/;function n(e,t){var r="string"==typeof e?g(e):e;e="object"==typeof e?o(e):e;var s=g(t),n="";r.protocol&&!r.slashes&&(n=r.protocol,e=e.replace(r.protocol,""),n+="/"===t[0]||"/"===e[0]?"/":""),n&&s.protocol&&(n="",s.slashes||(n=s.protocol,t=t.replace(s.protocol,"")));var l=e.match(h);l&&!s.protocol&&(e=e.substr((n=l[1]+(l[2]||"")).length),/^\/\/[^/]/.test(t)&&(n=n.slice(0,-1)));var i=new URL(e,c+"/"),f=new URL(t,i).toString().replace(c,""),u=s.protocol||r.protocol;return u+=r.slashes||s.slashes?"//":"",!n&&u?f=f.replace(a,u):n&&(f=f.replace(a,"")),p.test(f)||~t.indexOf(".")||"/"===e.slice(-1)||"/"===t.slice(-1)||"/"!==f.slice(-1)||(f=f.slice(0,-1)),n&&(f=n+("/"===f[0]?f.substr(1):f)),f}function l(){}l.parse=g,l.format=o,l.resolve=n,l.resolveObject=n;var i=/^https?|ftp|gopher|file/,f=/^(.*?)([#?].*)/,u=/^([a-z0-9.+-]*:)(\/{0,3})(.*)/i,m=/^([a-z0-9.+-]*:)?\/\/\/*/i,v=/^([a-z0-9.+-]*:)(\/{0,2})\[(.*)\]$/i;function d(e){try{return decodeURI(e)}catch(t){return e}}function g(e,r,a){if(void 0===r&&(r=!1),void 0===a&&(a=!1),e&&"object"==typeof e&&e instanceof l)return e;var h=(e=e.trim()).match(f);e=h?d(h[1]).replace(/\\/g,"/")+h[2]:d(e).replace(/\\/g,"/"),v.test(e)&&"/"!==e.slice(-1)&&(e+="/");var p=!/(^javascript)/.test(e)&&e.match(u),n=m.test(e),g="";p&&(i.test(p[1])||(g=p[1].toLowerCase(),e=""+p[2]+p[3]),p[2]||(n=!1,i.test(p[1])?(g=p[1],e=""+p[3]):e="//"+p[3]),3!==p[2].length&&1!==p[2].length||(g=p[1],e="/"+p[3]));var b,y=(h?h[1]:e).match(/(:[0-9]+)/),j="";y&&y[1]&&3===y[1].length&&(e=e.replace(j=y[1],j+"00"));var w=new l,x="",U="";try{b=new URL(e)}catch(t){x=t,g||a||!/^\/\//.test(e)||/^\/\/.+[@.]/.test(e)||(U="/",e=e.substr(1));try{b=new URL(e,c)}catch(e){return w.protocol=g,w.href=g,w}}w.slashes=n&&!U,w.host=b.host===s?"":b.host,w.hostname=b.hostname===s?"":b.hostname.replace(/(\[|\])/g,""),w.protocol=x?g||null:b.protocol,w.search=b.search.replace(/\\/g,"%5C"),w.hash=b.hash.replace(/\\/g,"%5C");var R=e.split("#");!w.search&&~R[0].indexOf("?")&&(w.search="?"),w.hash||""!==R[1]||(w.hash="#"),w.query=r?t.decode(b.search.substr(1)):w.search.substr(1),w.pathname=U+d(b.pathname).replace(/"/g,"%22"),"about:"===w.protocol&&"blank"===w.pathname&&(w.protocol="",w.pathname=""),x&&"/"!==e[0]&&(w.pathname=w.pathname.substr(1)),g&&!i.test(g)&&"/"!==e.slice(-1)&&"/"===w.pathname&&(w.pathname=""),w.path=w.pathname+w.search,w.auth=[b.username,b.password].map(decodeURIComponent).filter(Boolean).join(":"),w.port=b.port,j&&(w.host=w.host.replace(j+"00",j),w.port=w.port.slice(0,-2)),w.href=U?""+w.pathname+w.search+w.hash:o(w);var O=/^(file)/.test(w.href)?["host","hostname"]:[];return Object.keys(w).forEach(function(e){~O.indexOf(e)||(w[e]=w[e]||null)}),w}exports.parse=g,exports.format=o,exports.resolve=n,exports.resolveObject=function(e,t){return g(n(e,t))},exports.Url=l;
 //# sourceMappingURL=index.js.map
 
-
-/***/ }),
-
-/***/ "./node_modules/next/dist/build/polyfills/fetch/whatwg-fetch.js":
-/*!**********************************************************************!*\
-  !*** ./node_modules/next/dist/build/polyfills/fetch/whatwg-fetch.js ***!
-  \**********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* globals self */exports.Headers=self.Headers;exports.Request=self.Request;exports.Response=self.Response;exports.fetch=self.fetch;
 
 /***/ }),
 
@@ -2929,21 +2945,21 @@ var assign=Object.assign.bind(Object);function g(){return assign;}Object.defineP
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2Fhome%2Fdaniel%2FDocumentos%2FNext-course%2Fpodcasts%2Fpages%2Findex.js!./":
-/*!**************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2Fhome%2Fdaniel%2FDocumentos%2FNext-course%2Fpodcasts%2Fpages%2Findex.js ***!
-  \**************************************************************************************************************************************************************************************/
+/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fchannel%2F%5Bchannel%5D&absolutePagePath=%2Fhome%2Fdaniel%2FDocumentos%2FNext-course%2Fpodcasts%2Fpages%2Fchannel%2F%5Bchannel%5D.js!./":
+/*!*******************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fchannel%2F%5Bchannel%5D&absolutePagePath=%2Fhome%2Fdaniel%2FDocumentos%2FNext-course%2Fpodcasts%2Fpages%2Fchannel%2F%5Bchannel%5D.js ***!
+  \*******************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-    (window.__NEXT_P=window.__NEXT_P||[]).push(["/", function() {
-      var mod = __webpack_require__(/*! ./pages/index.js */ "./pages/index.js")
+    (window.__NEXT_P=window.__NEXT_P||[]).push(["/channel/[channel]", function() {
+      var mod = __webpack_require__(/*! ./pages/channel/[channel].js */ "./pages/channel/[channel].js")
       if(true) {
-        module.hot.accept(/*! ./pages/index.js */ "./pages/index.js", function() {
-          if(!next.router.components["/"]) return
-          var updatedPage = __webpack_require__(/*! ./pages/index.js */ "./pages/index.js")
-          next.router.update("/", updatedPage)
+        module.hot.accept(/*! ./pages/channel/[channel].js */ "./pages/channel/[channel].js", function() {
+          if(!next.router.components["/channel/[channel]"]) return
+          var updatedPage = __webpack_require__(/*! ./pages/channel/[channel].js */ "./pages/channel/[channel].js")
+          next.router.update("/channel/[channel]", updatedPage)
         })
       }
       return mod
@@ -8555,6 +8571,162 @@ module.exports = __webpack_require__(/*! ./dist/style */ "./node_modules/styled-
 
 /***/ }),
 
+/***/ "./pages/PodcastPlayer.js":
+/*!********************************!*\
+  !*** ./pages/PodcastPlayer.js ***!
+  \********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _emotion_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @emotion/core */ "./node_modules/@emotion/core/dist/core.browser.esm.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_2__);
+var _this = undefined,
+    _jsxFileName = "/home/daniel/Documentos/Next-course/podcasts/pages/PodcastPlayer.js";
+
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+function _EMOTION_STRINGIFIED_CSS_ERROR__() { return "You have tried to stringify object returned from `css` function. It isn't supposed to be used directly (e.g. as value of the `className` prop), but rather handed to emotion so it can handle it (e.g. as value of `css` prop)."; }
+
+
+
+
+
+var _ref = false ? undefined : {
+  name: "lkpsfi-styles",
+  styles: "nav{background:none;}nav a{display:inline-block;padding:15px;color:white;cursor:pointer;text-decoration:none;}& .clip{display:flex;height:100%;flex-direction:column;background:#8756ca;color:white;}& picture{display:flex;align-items:center;justify-content:center;flex:1 1;flex-direction:column;width:auto;padding:10%;}& picture div{width:100%;height:100%;background-position:50% 50%;background-size:contain;background-repeat:no-repeat;}& .player{padding:30px;background:rgba(0,0,0,0.3);text-align:center;}& h3{margin:0;}& h6{margin:0;margin-top:1em;}& audio{margin-top:2em;width:100%;}.modal{position:fixed;top:0;left:0;right:0;bottom:0;z-index:99999;};label:styles;",
+  map: "/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2RhbmllbC9Eb2N1bWVudG9zL05leHQtY291cnNlL3BvZGNhc3RzL3BhZ2VzL1BvZGNhc3RQbGF5ZXIuanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBS29CIiwiZmlsZSI6Ii9ob21lL2RhbmllbC9Eb2N1bWVudG9zL05leHQtY291cnNlL3BvZGNhc3RzL3BhZ2VzL1BvZGNhc3RQbGF5ZXIuanMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBjc3MsIGpzeCwgR2xvYmFsIH0gZnJvbSAnQGVtb3Rpb24vY29yZSdcbmltcG9ydCBMaW5rIGZyb20gXCJuZXh0L2xpbmtcIlxuXG5cbmNvbnN0IFBvZGNhc3RQbGF5ZXIgPSAoeyBwb2RjYXN0LCBvbkNsb3NlIH0pID0+IHtcbiAgY29uc3Qgc3R5bGVzID0gY3NzYFxuICAgIG5hdiB7XG4gICAgICBiYWNrZ3JvdW5kOiBub25lO1xuICAgIH1cbiAgICBuYXYgYSB7XG4gICAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gICAgICBwYWRkaW5nOiAxNXB4O1xuICAgICAgY29sb3I6IHdoaXRlO1xuICAgICAgY3Vyc29yOiBwb2ludGVyO1xuICAgICAgdGV4dC1kZWNvcmF0aW9uOiBub25lO1xuICAgIH1cbiAgICAmIC5jbGlwIHtcbiAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICBoZWlnaHQ6IDEwMCU7XG4gICAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICAgICAgYmFja2dyb3VuZDogIzg3NTZjYTtcbiAgICAgIGNvbG9yOiB3aGl0ZTtcbiAgICB9XG4gICAgJiBwaWN0dXJlIHtcbiAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gICAgICBmbGV4OiAxIDE7XG4gICAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICAgICAgd2lkdGg6IGF1dG87XG4gICAgICBwYWRkaW5nOiAxMCU7XG4gICAgfVxuICAgICYgcGljdHVyZSBkaXYge1xuICAgICAgd2lkdGg6IDEwMCU7XG4gICAgICBoZWlnaHQ6IDEwMCU7XG4gICAgICBiYWNrZ3JvdW5kLXBvc2l0aW9uOiA1MCUgNTAlO1xuICAgICAgYmFja2dyb3VuZC1zaXplOiBjb250YWluO1xuICAgICAgYmFja2dyb3VuZC1yZXBlYXQ6IG5vLXJlcGVhdDtcbiAgICB9XG4gICAgJiAucGxheWVyIHtcbiAgICAgIHBhZGRpbmc6IDMwcHg7XG4gICAgICBiYWNrZ3JvdW5kOiByZ2JhKDAsMCwwLDAuMyk7XG4gICAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gICAgfVxuICAgICYgaDMge1xuICAgICAgbWFyZ2luOiAwO1xuICAgIH1cbiAgICAmIGg2IHtcbiAgICAgIG1hcmdpbjogMDtcbiAgICAgIG1hcmdpbi10b3A6IDFlbTtcbiAgICB9XG4gICAgJiBhdWRpbyB7XG4gICAgICBtYXJnaW4tdG9wOiAyZW07XG4gICAgICB3aWR0aDogMTAwJTtcbiAgICB9XG5cbiAgICAubW9kYWwge1xuICAgICAgcG9zaXRpb246IGZpeGVkO1xuICAgICAgdG9wOiAwO1xuICAgICAgbGVmdDogMDtcbiAgICAgIHJpZ2h0OiAwO1xuICAgICAgYm90dG9tOiAwO1xuICAgICAgei1pbmRleDogOTk5OTk7XG4gICAgfVxuICBgO1xuXG4gIFxuICByZXR1cm4gKFxuICAgIDxkaXYgY3NzPXtzdHlsZXN9PlxuICAgICAge3BvZGNhc3QgJiYgPGRpdiBjbGFzc05hbWU9J21vZGFsJz5cbiAgICAgICAgPGRpdiBjbGFzc05hbWU9J2NsaXAnPlxuICAgICAgICAgIDxuYXY+XG4gICAgICAgICAgICB7XG4gICAgICAgICAgICAgIG9uQ2xvc2UgPyA8YSBvbkNsaWNrPXtvbkNsb3NlfT4mbHQ7IFZvbHZlcjwvYT5cbiAgICAgICAgICAgICAgOlxuICAgICAgICAgICAgICA8TGluayBocmVmPXtgL2NoYW5uZWwvJHtwb2RjYXN0LmNoYW5uZWwuaWR9YH0+XG4gICAgICAgICAgICAgICAgPGEgY2xhc3NOYW1lPSdjbG9zZSc+Jmx0OyBWb2x2ZXI8L2E+XG4gICAgICAgICAgICAgIDwvTGluaz5cbiAgICAgICAgICAgIH1cbiAgICAgICAgICAgIFxuICAgICAgICAgIDwvbmF2PlxuXG4gICAgICAgICAgPHBpY3R1cmU+XG4gICAgICAgICAgICA8ZGl2IHN0eWxlPXt7IGJhY2tncm91bmRJbWFnZTogYHVybCgke3BvZGNhc3QudXJscy5pbWFnZSB8fCBwb2RjYXN0LmNoYW5uZWwudXJscy5sb2dvX2ltYWdlLm9yaWdpbmFsfSlgIH19IC8+XG4gICAgICAgICAgPC9waWN0dXJlPlxuXG4gICAgICAgICAgPGRpdiBjbGFzc05hbWU9J3BsYXllcic+XG4gICAgICAgICAgICA8aDM+eyBwb2RjYXN0LnRpdGxlIH08L2gzPlxuICAgICAgICAgICAgPGg2PnsgcG9kY2FzdC5jaGFubmVsLnRpdGxlIH08L2g2PlxuICAgICAgICAgICAgPGF1ZGlvIGNvbnRyb2xzIGF1dG9QbGF5PXt0cnVlfT5cbiAgICAgICAgICAgICAgPHNvdXJjZSBzcmM9e3BvZGNhc3QudXJscy5oaWdoX21wM30gdHlwZT0nYXVkaW8vbXBlZycgLz5cbiAgICAgICAgICAgIDwvYXVkaW8+XG4gICAgICAgICAgPC9kaXY+XG4gICAgICAgIDwvZGl2PlxuICAgICAgPC9kaXY+fVxuICAgIDwvZGl2PlxuICApXG59XG5cbmV4cG9ydCBkZWZhdWx0IFBvZGNhc3RQbGF5ZXIiXX0= */",
+  toString: _EMOTION_STRINGIFIED_CSS_ERROR__
+};
+
+var PodcastPlayer = function PodcastPlayer(_ref2) {
+  var podcast = _ref2.podcast,
+      onClose = _ref2.onClose;
+  var styles = _ref;
+  return Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])("div", {
+    css: styles,
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 69,
+      columnNumber: 5
+    }
+  }, podcast && Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])("div", {
+    className: "modal",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 70,
+      columnNumber: 19
+    }
+  }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])("div", {
+    className: "clip",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 71,
+      columnNumber: 9
+    }
+  }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])("nav", {
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 72,
+      columnNumber: 11
+    }
+  }, onClose ? Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])("a", {
+    onClick: onClose,
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 74,
+      columnNumber: 25
+    }
+  }, "< Volver") : Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+    href: "/channel/".concat(podcast.channel.id),
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 76,
+      columnNumber: 15
+    }
+  }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])("a", {
+    className: "close",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 77,
+      columnNumber: 17
+    }
+  }, "< Volver"))), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])("picture", {
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 83,
+      columnNumber: 11
+    }
+  }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])("div", {
+    style: {
+      backgroundImage: "url(".concat(podcast.urls.image || podcast.channel.urls.logo_image.original, ")")
+    },
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 84,
+      columnNumber: 13
+    }
+  })), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])("div", {
+    className: "player",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 87,
+      columnNumber: 11
+    }
+  }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])("h3", {
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 88,
+      columnNumber: 13
+    }
+  }, podcast.title), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])("h6", {
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 89,
+      columnNumber: 13
+    }
+  }, podcast.channel.title), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])("audio", {
+    controls: true,
+    autoPlay: true,
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 90,
+      columnNumber: 13
+    }
+  }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])("source", {
+    src: podcast.urls.high_mp3,
+    type: "audio/mpeg",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 91,
+      columnNumber: 15
+    }
+  }))))));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (PodcastPlayer);
+
+/***/ }),
+
 /***/ "./pages/_error.js":
 /*!*************************!*\
   !*** ./pages/_error.js ***!
@@ -8682,10 +8854,10 @@ Error.getInitialProps = function (_ref3) {
 
 /***/ }),
 
-/***/ "./pages/index.js":
-/*!************************!*\
-  !*** ./pages/index.js ***!
-  \************************/
+/***/ "./pages/channel/[channel].js":
+/*!************************************!*\
+  !*** ./pages/channel/[channel].js ***!
+  \************************************/
 /*! exports provided: __N_SSP, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -8694,67 +8866,169 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__N_SSP", function() { return __N_SSP; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var isomorphic_fetch__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! isomorphic-fetch */ "./node_modules/isomorphic-fetch/fetch-npm-browserify.js");
-/* harmony import */ var isomorphic_fetch__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(isomorphic_fetch__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _components_Layout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Layout */ "./components/Layout.js");
-/* harmony import */ var _components_ChannelGrid__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/ChannelGrid */ "./components/ChannelGrid.js");
-/* harmony import */ var _error__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./_error */ "./pages/_error.js");
-/* harmony import */ var _emotion_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @emotion/core */ "./node_modules/@emotion/core/dist/core.browser.esm.js");
+/* harmony import */ var _emotion_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @emotion/core */ "./node_modules/@emotion/core/dist/core.browser.esm.js");
+/* harmony import */ var _components_Layout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/Layout */ "./components/Layout.js");
+/* harmony import */ var _components_ChannelGrid__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/ChannelGrid */ "./components/ChannelGrid.js");
+/* harmony import */ var _components_PodcastList__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../components/PodcastList */ "./components/PodcastList.js");
+/* harmony import */ var _PodcastPlayer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../PodcastPlayer */ "./pages/PodcastPlayer.js");
+/* harmony import */ var _error__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../_error */ "./pages/_error.js");
 var _this = undefined,
-    _jsxFileName = "/home/daniel/Documentos/Next-course/podcasts/pages/index.js";
+    _jsxFileName = "/home/daniel/Documentos/Next-course/podcasts/pages/channel/[channel].js";
 
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
+function _EMOTION_STRINGIFIED_CSS_ERROR__() { return "You have tried to stringify object returned from `css` function. It isn't supposed to be used directly (e.g. as value of the `className` prop), but rather handed to emotion so it can handle it (e.g. as value of `css` prop)."; }
 
 
 
 
 
-var Home = function Home(_ref) {
-  var channels = _ref.channels,
-      statusCode = _ref.statusCode;
-  if (statusCode != 200) return Object(_emotion_core__WEBPACK_IMPORTED_MODULE_5__["jsx"])(_error__WEBPACK_IMPORTED_MODULE_4__["default"], {
+
+
+
+
+
+var _ref = false ? undefined : {
+  name: "3ugqql-styles",
+  styles: "& h1{font-weight:600;padding:15px;}& .banner{width:100%;padding-bottom:25%;background-position:50% 50%;background-size:cover;background-color:#aaa;}& .modal{position:fixed;top:0;left:0;right:0;bottom:0;z-index:99999;};label:styles;",
+  map: "/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2RhbmllbC9Eb2N1bWVudG9zL05leHQtY291cnNlL3BvZGNhc3RzL3BhZ2VzL2NoYW5uZWwvW2NoYW5uZWxdLmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQXdCb0IiLCJmaWxlIjoiL2hvbWUvZGFuaWVsL0RvY3VtZW50b3MvTmV4dC1jb3Vyc2UvcG9kY2FzdHMvcGFnZXMvY2hhbm5lbC9bY2hhbm5lbF0uanMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyB1c2VTdGF0ZSB9IGZyb20gXCJyZWFjdFwiO1xuaW1wb3J0IHsgY3NzLCBqc3gsIEdsb2JhbCB9IGZyb20gJ0BlbW90aW9uL2NvcmUnXG5pbXBvcnQgTGF5b3V0IGZyb20gJy4uLy4uL2NvbXBvbmVudHMvTGF5b3V0JztcbmltcG9ydCBDaGFubmVsR3JpZCBmcm9tICcuLi8uLi9jb21wb25lbnRzL0NoYW5uZWxHcmlkJztcbmltcG9ydCBQb2RjYXN0TGlzdCBmcm9tICcuLi8uLi9jb21wb25lbnRzL1BvZGNhc3RMaXN0JztcbmltcG9ydCBQb2RjYXN0UGxheWVyIGZyb20gJy4uL1BvZGNhc3RQbGF5ZXInO1xuaW1wb3J0IEVycm9yIGZyb20gJy4uL19lcnJvcic7XG5cbmNvbnN0IGNoYW5uZWwgPSAoeyBjaGFubmVsLCBhdWRpb0NsaXBzLCBzZXJpZXMsIHN0YXR1c0NvZGUgfSkgPT4ge1xuICBjb25zdCBbIG9wZW5Qb2RjYXN0LCBzZXRQb2RjYXN0IF0gPSB1c2VTdGF0ZShudWxsKTtcblxuICBjb25zdCBzZXRPcGVuUG9kY2FzdCA9IChldmVudCwgcG9kY2FzdCkgPT4ge1xuICAgIGV2ZW50LnByZXZlbnREZWZhdWx0KCk7XG4gICAgaWYoIGV2ZW50Lm1ldGFLZXkgfHwgZXZlbnQuY3RybEtleSB8fCBldmVudC5zaGlmdEtleSB8fCAoZXZlbnQubmF0aXZlRXZlbnQgJiYgZXZlbnQubmF0aXZlRXZlbnQud2hpY2ggPT09IDIpICl7XG4gICAgICByZXR1cm5cbiAgICB9XG4gICAgc2V0UG9kY2FzdChwb2RjYXN0KTtcbiAgfVxuXG4gIGNvbnN0IGNsb3NlUG9kY2FzdCA9IChldmVudCkgPT57XG4gICAgZXZlbnQucHJldmVudERlZmF1bHQoKTtcbiAgICBzZXRQb2RjYXN0KG51bGwpO1xuICB9XG5cbiAgY29uc3Qgc3R5bGVzID0gY3NzYFxuICAgICYgaDEge1xuICAgICAgZm9udC13ZWlnaHQ6IDYwMDtcbiAgICAgIHBhZGRpbmc6IDE1cHg7XG4gICAgfVxuICAgICYgLmJhbm5lciB7XG4gICAgICB3aWR0aDogMTAwJTtcbiAgICAgIHBhZGRpbmctYm90dG9tOiAyNSU7XG4gICAgICBiYWNrZ3JvdW5kLXBvc2l0aW9uOiA1MCUgNTAlO1xuICAgICAgYmFja2dyb3VuZC1zaXplOiBjb3ZlcjtcbiAgICAgIGJhY2tncm91bmQtY29sb3I6ICNhYWE7XG4gICAgfVxuXG4gICAgJiAubW9kYWwge1xuICAgICAgcG9zaXRpb246IGZpeGVkO1xuICAgICAgdG9wOiAwO1xuICAgICAgbGVmdDogMDtcbiAgICAgIHJpZ2h0OiAwO1xuICAgICAgYm90dG9tOiAwO1xuICAgICAgei1pbmRleDogOTk5OTk7XG4gICAgfVxuXHRcdFxuICBgO1xuICBpZiggc3RhdHVzQ29kZSAhPSAyMDApIHJldHVybiA8RXJyb3Igc3RhdHVzQ29kZT17c3RhdHVzQ29kZX0gLz5cblxuICByZXR1cm4oXG4gICAgPExheW91dCB0aXRsZT17Y2hhbm5lbC50aXRsZX0+XG4gICAgICA8ZGl2IGNzcz17c3R5bGVzfT5cbiAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJiYW5uZXJcIiBzdHlsZT17eyBiYWNrZ3JvdW5kSW1hZ2U6IGB1cmwoJHtjaGFubmVsLnVybHMuYmFubmVyX2ltYWdlLm9yaWdpbmFsfSlgIH19IC8+XG4gICAgICAgIFxuICAgICAgICB7IG9wZW5Qb2RjYXN0ICYmIDxkaXYgY2xhc3NOYW1lPVwibW9kYWxcIj5cbiAgICAgICAgICA8UG9kY2FzdFBsYXllciBwb2RjYXN0PXtvcGVuUG9kY2FzdH0gb25DbG9zZT17Y2xvc2VQb2RjYXN0fSAgLz5cbiAgICAgICAgICA8L2Rpdj4gfVxuICAgICAgICBcbiAgICAgICAgPGgxPnsgY2hhbm5lbC50aXRsZSB9PC9oMT5cblxuICAgICAgICA8aDI+U2VyaWVzPC9oMj5cbiAgICAgICAgPENoYW5uZWxHcmlkIGNoYW5uZWxzPXtzZXJpZXN9Lz5cblxuICAgICAgICA8aDI+w5psdGltb3MgUG9kY2FzdHM8L2gyPlxuICAgICAgICA8UG9kY2FzdExpc3QgYXVkaW9DbGlwcz17YXVkaW9DbGlwc30gb25DbGlja1BvZGNhc3Q9e3NldE9wZW5Qb2RjYXN0fS8+XG5cbiAgICAgIDwvZGl2PlxuICAgIDwvTGF5b3V0PlxuICApXG59XG5cbmV4cG9ydCBhc3luYyBmdW5jdGlvbiBnZXRTZXJ2ZXJTaWRlUHJvcHMoeyBxdWVyeSwgcmVzIH0pIHtcblxuICBsZXQgY2hhbm5lbElkID0gcXVlcnkuY2hhbm5lbDtcblxuICB0cnl7XG4gICAgbGV0IFsgcmVxQ2hhbm5lbCwgcmVxQXVkaW9DbGlwcywgcmVxU2VyaWVzIF0gPSBhd2FpdCBQcm9taXNlLmFsbChbXG4gICAgICBmZXRjaChgaHR0cHM6Ly9hcGkuYXVkaW9ib29tLmNvbS9jaGFubmVscy8ke2NoYW5uZWxJZH1gKSxcbiAgICAgIGZldGNoKGBodHRwczovL2FwaS5hdWRpb2Jvb20uY29tL2NoYW5uZWxzLyR7Y2hhbm5lbElkfS9hdWRpb19jbGlwc2ApLFxuICAgICAgZmV0Y2goYGh0dHBzOi8vYXBpLmF1ZGlvYm9vbS5jb20vY2hhbm5lbHMvJHtjaGFubmVsSWR9L2NoaWxkX2NoYW5uZWxzYClcbiAgICBdKVxuXG4gICAgaWYoIHJlcUNoYW5uZWwuc3RhdHVzID49IDQwMCApe1xuICAgICAgcmVzLnN0YXR1c0NvZGUgPSByZXFDaGFubmVsLnN0YXR1c1xuICAgICAgcmV0dXJuIHsgcHJvcHM6IHsgY2hhbm5lbDogbnVsbCwgYXVkaW9DbGlwczogbnVsbCwgc2VyaWVzOiBudWxsLCBzdGF0dXNDb2RlOiByZXFDaGFubmVsLnN0YXR1cyB9fVxuICAgIH1cbiAgXG4gIFxuICAgIGxldCBkYXRhQ2hhbm5lbCA9IGF3YWl0IHJlcUNoYW5uZWwuanNvbigpO1xuICAgIGxldCBjaGFubmVsID0gZGF0YUNoYW5uZWwuYm9keS5jaGFubmVsXG4gICAgXG4gICAgbGV0IGRhdGFBdWRpb0NsaXBzID0gYXdhaXQgcmVxQXVkaW9DbGlwcy5qc29uKCk7XG4gICAgbGV0IGF1ZGlvQ2xpcHMgPSBkYXRhQXVkaW9DbGlwcy5ib2R5LmF1ZGlvX2NsaXBzXG4gIFxuICAgIGxldCBkYXRhU2VyaWVzID0gYXdhaXQgcmVxU2VyaWVzLmpzb24oKTtcbiAgICBsZXQgc2VyaWVzID0gZGF0YVNlcmllcy5ib2R5LmNoYW5uZWxzXG4gIFxuICAgIHJldHVybiB7IHByb3BzOiB7IGNoYW5uZWwsIGF1ZGlvQ2xpcHMsIHNlcmllcywgc3RhdHVzQ29kZTogMjAwIH0gfVxuICB9XG4gIGNhdGNoKGUpe1xuICAgIHJldHVybiB7IHByb3BzOiB7IGNoYW5uZWw6IG51bGwsIGF1ZGlvQ2xpcHM6IG51bGwsIHNlcmllczogbnVsbCwgc3RhdHVzQ29kZTogNTAzIH19XG4gIH1cblxuICBcbn1cblxuZXhwb3J0IGRlZmF1bHQgY2hhbm5lbDsiXX0= */",
+  toString: _EMOTION_STRINGIFIED_CSS_ERROR__
+};
+
+var channel = function channel(_ref2) {
+  var channel = _ref2.channel,
+      audioClips = _ref2.audioClips,
+      series = _ref2.series,
+      statusCode = _ref2.statusCode;
+
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(null),
+      openPodcast = _useState[0],
+      setPodcast = _useState[1];
+
+  var setOpenPodcast = function setOpenPodcast(event, podcast) {
+    event.preventDefault();
+
+    if (event.metaKey || event.ctrlKey || event.shiftKey || event.nativeEvent && event.nativeEvent.which === 2) {
+      return;
+    }
+
+    setPodcast(podcast);
+  };
+
+  var closePodcast = function closePodcast(event) {
+    event.preventDefault();
+    setPodcast(null);
+  };
+
+  var styles = _ref;
+  if (statusCode != 200) return Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])(_error__WEBPACK_IMPORTED_MODULE_6__["default"], {
     statusCode: statusCode,
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8,
-      columnNumber: 32
+      lineNumber: 48,
+      columnNumber: 33
     }
   });
-  return Object(_emotion_core__WEBPACK_IMPORTED_MODULE_5__["jsx"])(_components_Layout__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    title: "Podcasts",
+  return Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])(_components_Layout__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    title: channel.title,
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10,
-      columnNumber: 3
+      lineNumber: 51,
+      columnNumber: 5
     }
-  }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_5__["jsx"])(_components_ChannelGrid__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    channels: channels,
+  }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])("div", {
+    css: styles,
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11,
-      columnNumber: 4
+      lineNumber: 52,
+      columnNumber: 7
     }
-  }));
+  }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])("div", {
+    className: "banner",
+    style: {
+      backgroundImage: "url(".concat(channel.urls.banner_image.original, ")")
+    },
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 53,
+      columnNumber: 9
+    }
+  }), openPodcast && Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])("div", {
+    className: "modal",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 55,
+      columnNumber: 26
+    }
+  }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])(_PodcastPlayer__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    podcast: openPodcast,
+    onClose: closePodcast,
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 56,
+      columnNumber: 11
+    }
+  })), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])("h1", {
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 59,
+      columnNumber: 9
+    }
+  }, channel.title), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])("h2", {
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 61,
+      columnNumber: 9
+    }
+  }, "Series"), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])(_components_ChannelGrid__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    channels: series,
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 62,
+      columnNumber: 9
+    }
+  }), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])("h2", {
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 64,
+      columnNumber: 9
+    }
+  }, "\xDAltimos Podcasts"), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])(_components_PodcastList__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    audioClips: audioClips,
+    onClickPodcast: setOpenPodcast,
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 65,
+      columnNumber: 9
+    }
+  })));
 };
 
 var __N_SSP = true;
-/* harmony default export */ __webpack_exports__["default"] = (Home);
+/* harmony default export */ __webpack_exports__["default"] = (channel);
 
 /***/ }),
 
-/***/ 3:
-/*!******************************************************************************************************************************************!*\
-  !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2Fhome%2Fdaniel%2FDocumentos%2FNext-course%2Fpodcasts%2Fpages%2Findex.js ***!
-  \******************************************************************************************************************************************/
+/***/ 1:
+/*!***********************************************************************************************************************************************************************************!*\
+  !*** multi next-client-pages-loader?page=%2Fchannel%2F%5Bchannel%5D&absolutePagePath=%2Fhome%2Fdaniel%2FDocumentos%2FNext-course%2Fpodcasts%2Fpages%2Fchannel%2F%5Bchannel%5D.js ***!
+  \***********************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2F&absolutePagePath=%2Fhome%2Fdaniel%2FDocumentos%2FNext-course%2Fpodcasts%2Fpages%2Findex.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2Fhome%2Fdaniel%2FDocumentos%2FNext-course%2Fpodcasts%2Fpages%2Findex.js!./");
+module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Fchannel%2F%5Bchannel%5D&absolutePagePath=%2Fhome%2Fdaniel%2FDocumentos%2FNext-course%2Fpodcasts%2Fpages%2Fchannel%2F%5Bchannel%5D.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fchannel%2F%5Bchannel%5D&absolutePagePath=%2Fhome%2Fdaniel%2FDocumentos%2FNext-course%2Fpodcasts%2Fpages%2Fchannel%2F%5Bchannel%5D.js!./");
 
 
 /***/ }),
@@ -8770,5 +9044,5 @@ module.exports = dll_2adc2403d89adc16ead0;
 
 /***/ })
 
-},[[3,"static/runtime/webpack.js"]]]);
-//# sourceMappingURL=index.js.map
+},[[1,"static/runtime/webpack.js"]]]);
+//# sourceMappingURL=[channel].js.map

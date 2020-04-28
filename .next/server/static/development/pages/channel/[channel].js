@@ -1,7 +1,7 @@
 module.exports =
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
-/******/ 	var installedModules = require('../../../ssr-module-cache.js');
+/******/ 	var installedModules = require('../../../../ssr-module-cache.js');
 /******/
 /******/ 	// The require function
 /******/ 	function __webpack_require__(moduleId) {
@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -112,6 +112,100 @@ module.exports = require("next/dist/next-server/lib/router-context.js");
 /***/ (function(module, exports) {
 
 module.exports = require("next/dist/next-server/lib/utils.js");
+
+/***/ }),
+
+/***/ "./components/ChannelGrid.js":
+/*!***********************************!*\
+  !*** ./components/ChannelGrid.js ***!
+  \***********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _emotion_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @emotion/core */ "@emotion/core");
+/* harmony import */ var _emotion_core__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_emotion_core__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _helpers_slug__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../helpers/slug */ "./helpers/slug.js");
+var _jsxFileName = "/home/daniel/Documentos/Next-course/podcasts/components/ChannelGrid.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+function _EMOTION_STRINGIFIED_CSS_ERROR__() { return "You have tried to stringify object returned from `css` function. It isn't supposed to be used directly (e.g. as value of the `className` prop), but rather handed to emotion so it can handle it (e.g. as value of `css` prop)."; }
+
+
+
+
+
+
+var _ref = false ? undefined : {
+  name: "1wqzda9-styles",
+  styles: "& .channels{display:grid;grid-gap:15px;padding:15px;grid-template-columns:repeat( auto-fill,minmax(160px,1fr));& a{text-decoration:none;color:black;}}& .channel{display:block;border-radius:3px;box-shadow:0px 2px 6px rgba(0,0,0,0.15);margin-botto:0.5em;& img{width:100%;}& h2{padding:5px;font-size:0.9em;font-weight:600;margin:0;text-align:center;}};label:styles;",
+  map: "/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2RhbmllbC9Eb2N1bWVudG9zL05leHQtY291cnNlL3BvZGNhc3RzL2NvbXBvbmVudHMvQ2hhbm5lbEdyaWQuanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBTW9CIiwiZmlsZSI6Ii9ob21lL2RhbmllbC9Eb2N1bWVudG9zL05leHQtY291cnNlL3BvZGNhc3RzL2NvbXBvbmVudHMvQ2hhbm5lbEdyaWQuanMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgTGluayBmcm9tIFwibmV4dC9saW5rXCJcbmltcG9ydCB7IGNzcyB9IGZyb20gJ0BlbW90aW9uL2NvcmUnXG5pbXBvcnQgc2x1Z2lmeSBmcm9tICcuLi9oZWxwZXJzL3NsdWcnO1xuXG5jb25zdCBDaGFubmVsR3JpZCA9ICh7IGNoYW5uZWxzIH0pID0+IHtcblxuICBjb25zdCBzdHlsZXMgPSBjc3NgXG5cdFx0JiAuY2hhbm5lbHMge1xuXHRcdFx0ZGlzcGxheTogZ3JpZDtcblx0XHRcdGdyaWQtZ2FwOiAxNXB4O1xuXHRcdFx0cGFkZGluZzogMTVweDtcbiAgICAgIGdyaWQtdGVtcGxhdGUtY29sdW1uczogcmVwZWF0KCBhdXRvLWZpbGwsIG1pbm1heCgxNjBweCwgMWZyKSk7XG4gICAgICBcbiAgICAgICYgYSB7XG4gICAgICAgIHRleHQtZGVjb3JhdGlvbjogbm9uZTtcbiAgICAgICAgY29sb3I6IGJsYWNrO1xuICAgICAgfVxuXHRcdH1cblxuXHRcdCYgLmNoYW5uZWwge1xuXHRcdFx0ZGlzcGxheTogYmxvY2s7XG5cdFx0XHRib3JkZXItcmFkaXVzOiAzcHg7XG5cdFx0XHRib3gtc2hhZG93OiAwcHggMnB4IDZweCByZ2JhKDAsMCwwLDAuMTUpO1xuXHRcdFx0bWFyZ2luLWJvdHRvOiAwLjVlbTtcblxuXHRcdFx0JiBpbWcge1xuXHRcdFx0XHR3aWR0aDogMTAwJTtcblx0XHRcdH1cblxuXHRcdFx0JiBoMiB7XG5cdFx0XHRcdHBhZGRpbmc6IDVweDsgZm9udC1zaXplOiAwLjllbTtcblx0XHRcdFx0Zm9udC13ZWlnaHQ6IDYwMDtcblx0XHRcdFx0bWFyZ2luOiAwO1xuXHRcdFx0XHR0ZXh0LWFsaWduOiBjZW50ZXI7XG5cdFx0XHR9XG5cdFx0fVxuICBgO1xuICBcbiAgcmV0dXJuKFxuICAgIDxkaXYgY3NzPXtzdHlsZXN9PlxuXHRcdFx0XHQ8ZGl2IGNsYXNzTmFtZT1cImNoYW5uZWxzXCI+XG4gICAgICAgICAge2NoYW5uZWxzLm1hcChjaGFubmVsID0+IChcbiAgICAgICAgICAgIDxMaW5rIGhyZWY9e1wiL2NoYW5uZWwvW2NoYW5uZWxdXCJ9IGFzPXtgL2NoYW5uZWwvJHtjaGFubmVsLmlkfWB9PlxuICAgICAgICAgICAgICA8YSBjbGFzc05hbWU9XCJjaGFubmVsXCI+XG4gICAgICAgICAgICAgICAgPGltZyBzcmM9e2NoYW5uZWwudXJscy5sb2dvX2ltYWdlLm9yaWdpbmFsfSBhbHQ9XCJcIi8+XG4gICAgICAgICAgICAgICAgPGgyPnsgY2hhbm5lbC50aXRsZSB9PC9oMj5cbiAgICAgICAgICAgICAgPC9hPlxuICAgICAgICAgICAgPC9MaW5rPlxuICAgICAgICAgICkpfVxuXHRcdFx0XHQ8L2Rpdj5cblx0XHRcdDwvZGl2PlxuICAgIFxuICApXG59XG5cbmV4cG9ydCBkZWZhdWx0IENoYW5uZWxHcmlkIl19 */",
+  toString: _EMOTION_STRINGIFIED_CSS_ERROR__
+};
+
+const ChannelGrid = ({
+  channels
+}) => {
+  const styles = _ref;
+  return Object(_emotion_core__WEBPACK_IMPORTED_MODULE_2__["jsx"])("div", {
+    css: styles,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 40,
+      columnNumber: 5
+    }
+  }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_2__["jsx"])("div", {
+    className: "channels",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 41,
+      columnNumber: 5
+    }
+  }, channels.map(channel => Object(_emotion_core__WEBPACK_IMPORTED_MODULE_2__["jsx"])(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    href: "/channel/[channel]",
+    as: `/channel/${channel.id}`,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 43,
+      columnNumber: 13
+    }
+  }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_2__["jsx"])("a", {
+    className: "channel",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 44,
+      columnNumber: 15
+    }
+  }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_2__["jsx"])("img", {
+    src: channel.urls.logo_image.original,
+    alt: "",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 45,
+      columnNumber: 17
+    }
+  }), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_2__["jsx"])("h2", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 46,
+      columnNumber: 17
+    }
+  }, channel.title))))));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (ChannelGrid);
 
 /***/ }),
 
@@ -252,6 +346,68 @@ const Layout = ({
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Layout);
+
+/***/ }),
+
+/***/ "./components/PodcastList.js":
+/*!***********************************!*\
+  !*** ./components/PodcastList.js ***!
+  \***********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _emotion_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @emotion/core */ "@emotion/core");
+/* harmony import */ var _emotion_core__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_emotion_core__WEBPACK_IMPORTED_MODULE_2__);
+var _jsxFileName = "/home/daniel/Documentos/Next-course/podcasts/components/PodcastList.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+const PodcastList = ({
+  audioClips,
+  onClickPodcast
+}) => {
+  return audioClips.map(clip => Object(_emotion_core__WEBPACK_IMPORTED_MODULE_2__["jsx"])("a", {
+    href: `/podcast/${clip.id}`,
+    onClick: e => onClickPodcast(e, clip),
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6,
+      columnNumber: 9
+    }
+  }, " ", clip.title, " "));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (PodcastList);
+
+/***/ }),
+
+/***/ "./helpers/slug.js":
+/*!*************************!*\
+  !*** ./helpers/slug.js ***!
+  \*************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return slug; });
+/* harmony import */ var slugify__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! slugify */ "slugify");
+/* harmony import */ var slugify__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(slugify__WEBPACK_IMPORTED_MODULE_0__);
+
+function slug(name) {
+  return slugify__WEBPACK_IMPORTED_MODULE_0___default()(name, {
+    lower: true
+  }).replace(/[^\w\-]+/g, '');
+}
 
 /***/ }),
 
@@ -1924,6 +2080,162 @@ module.exports = __webpack_require__(/*! ./dist/client/link */ "./node_modules/n
 
 /***/ }),
 
+/***/ "./pages/PodcastPlayer.js":
+/*!********************************!*\
+  !*** ./pages/PodcastPlayer.js ***!
+  \********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _emotion_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @emotion/core */ "@emotion/core");
+/* harmony import */ var _emotion_core__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_emotion_core__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_2__);
+var _jsxFileName = "/home/daniel/Documentos/Next-course/podcasts/pages/PodcastPlayer.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+function _EMOTION_STRINGIFIED_CSS_ERROR__() { return "You have tried to stringify object returned from `css` function. It isn't supposed to be used directly (e.g. as value of the `className` prop), but rather handed to emotion so it can handle it (e.g. as value of `css` prop)."; }
+
+
+
+
+
+var _ref = false ? undefined : {
+  name: "lkpsfi-styles",
+  styles: "nav{background:none;}nav a{display:inline-block;padding:15px;color:white;cursor:pointer;text-decoration:none;}& .clip{display:flex;height:100%;flex-direction:column;background:#8756ca;color:white;}& picture{display:flex;align-items:center;justify-content:center;flex:1 1;flex-direction:column;width:auto;padding:10%;}& picture div{width:100%;height:100%;background-position:50% 50%;background-size:contain;background-repeat:no-repeat;}& .player{padding:30px;background:rgba(0,0,0,0.3);text-align:center;}& h3{margin:0;}& h6{margin:0;margin-top:1em;}& audio{margin-top:2em;width:100%;}.modal{position:fixed;top:0;left:0;right:0;bottom:0;z-index:99999;};label:styles;",
+  map: "/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2RhbmllbC9Eb2N1bWVudG9zL05leHQtY291cnNlL3BvZGNhc3RzL3BhZ2VzL1BvZGNhc3RQbGF5ZXIuanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBS29CIiwiZmlsZSI6Ii9ob21lL2RhbmllbC9Eb2N1bWVudG9zL05leHQtY291cnNlL3BvZGNhc3RzL3BhZ2VzL1BvZGNhc3RQbGF5ZXIuanMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBjc3MsIGpzeCwgR2xvYmFsIH0gZnJvbSAnQGVtb3Rpb24vY29yZSdcbmltcG9ydCBMaW5rIGZyb20gXCJuZXh0L2xpbmtcIlxuXG5cbmNvbnN0IFBvZGNhc3RQbGF5ZXIgPSAoeyBwb2RjYXN0LCBvbkNsb3NlIH0pID0+IHtcbiAgY29uc3Qgc3R5bGVzID0gY3NzYFxuICAgIG5hdiB7XG4gICAgICBiYWNrZ3JvdW5kOiBub25lO1xuICAgIH1cbiAgICBuYXYgYSB7XG4gICAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gICAgICBwYWRkaW5nOiAxNXB4O1xuICAgICAgY29sb3I6IHdoaXRlO1xuICAgICAgY3Vyc29yOiBwb2ludGVyO1xuICAgICAgdGV4dC1kZWNvcmF0aW9uOiBub25lO1xuICAgIH1cbiAgICAmIC5jbGlwIHtcbiAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICBoZWlnaHQ6IDEwMCU7XG4gICAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICAgICAgYmFja2dyb3VuZDogIzg3NTZjYTtcbiAgICAgIGNvbG9yOiB3aGl0ZTtcbiAgICB9XG4gICAgJiBwaWN0dXJlIHtcbiAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gICAgICBmbGV4OiAxIDE7XG4gICAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICAgICAgd2lkdGg6IGF1dG87XG4gICAgICBwYWRkaW5nOiAxMCU7XG4gICAgfVxuICAgICYgcGljdHVyZSBkaXYge1xuICAgICAgd2lkdGg6IDEwMCU7XG4gICAgICBoZWlnaHQ6IDEwMCU7XG4gICAgICBiYWNrZ3JvdW5kLXBvc2l0aW9uOiA1MCUgNTAlO1xuICAgICAgYmFja2dyb3VuZC1zaXplOiBjb250YWluO1xuICAgICAgYmFja2dyb3VuZC1yZXBlYXQ6IG5vLXJlcGVhdDtcbiAgICB9XG4gICAgJiAucGxheWVyIHtcbiAgICAgIHBhZGRpbmc6IDMwcHg7XG4gICAgICBiYWNrZ3JvdW5kOiByZ2JhKDAsMCwwLDAuMyk7XG4gICAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gICAgfVxuICAgICYgaDMge1xuICAgICAgbWFyZ2luOiAwO1xuICAgIH1cbiAgICAmIGg2IHtcbiAgICAgIG1hcmdpbjogMDtcbiAgICAgIG1hcmdpbi10b3A6IDFlbTtcbiAgICB9XG4gICAgJiBhdWRpbyB7XG4gICAgICBtYXJnaW4tdG9wOiAyZW07XG4gICAgICB3aWR0aDogMTAwJTtcbiAgICB9XG5cbiAgICAubW9kYWwge1xuICAgICAgcG9zaXRpb246IGZpeGVkO1xuICAgICAgdG9wOiAwO1xuICAgICAgbGVmdDogMDtcbiAgICAgIHJpZ2h0OiAwO1xuICAgICAgYm90dG9tOiAwO1xuICAgICAgei1pbmRleDogOTk5OTk7XG4gICAgfVxuICBgO1xuXG4gIFxuICByZXR1cm4gKFxuICAgIDxkaXYgY3NzPXtzdHlsZXN9PlxuICAgICAge3BvZGNhc3QgJiYgPGRpdiBjbGFzc05hbWU9J21vZGFsJz5cbiAgICAgICAgPGRpdiBjbGFzc05hbWU9J2NsaXAnPlxuICAgICAgICAgIDxuYXY+XG4gICAgICAgICAgICB7XG4gICAgICAgICAgICAgIG9uQ2xvc2UgPyA8YSBvbkNsaWNrPXtvbkNsb3NlfT4mbHQ7IFZvbHZlcjwvYT5cbiAgICAgICAgICAgICAgOlxuICAgICAgICAgICAgICA8TGluayBocmVmPXtgL2NoYW5uZWwvJHtwb2RjYXN0LmNoYW5uZWwuaWR9YH0+XG4gICAgICAgICAgICAgICAgPGEgY2xhc3NOYW1lPSdjbG9zZSc+Jmx0OyBWb2x2ZXI8L2E+XG4gICAgICAgICAgICAgIDwvTGluaz5cbiAgICAgICAgICAgIH1cbiAgICAgICAgICAgIFxuICAgICAgICAgIDwvbmF2PlxuXG4gICAgICAgICAgPHBpY3R1cmU+XG4gICAgICAgICAgICA8ZGl2IHN0eWxlPXt7IGJhY2tncm91bmRJbWFnZTogYHVybCgke3BvZGNhc3QudXJscy5pbWFnZSB8fCBwb2RjYXN0LmNoYW5uZWwudXJscy5sb2dvX2ltYWdlLm9yaWdpbmFsfSlgIH19IC8+XG4gICAgICAgICAgPC9waWN0dXJlPlxuXG4gICAgICAgICAgPGRpdiBjbGFzc05hbWU9J3BsYXllcic+XG4gICAgICAgICAgICA8aDM+eyBwb2RjYXN0LnRpdGxlIH08L2gzPlxuICAgICAgICAgICAgPGg2PnsgcG9kY2FzdC5jaGFubmVsLnRpdGxlIH08L2g2PlxuICAgICAgICAgICAgPGF1ZGlvIGNvbnRyb2xzIGF1dG9QbGF5PXt0cnVlfT5cbiAgICAgICAgICAgICAgPHNvdXJjZSBzcmM9e3BvZGNhc3QudXJscy5oaWdoX21wM30gdHlwZT0nYXVkaW8vbXBlZycgLz5cbiAgICAgICAgICAgIDwvYXVkaW8+XG4gICAgICAgICAgPC9kaXY+XG4gICAgICAgIDwvZGl2PlxuICAgICAgPC9kaXY+fVxuICAgIDwvZGl2PlxuICApXG59XG5cbmV4cG9ydCBkZWZhdWx0IFBvZGNhc3RQbGF5ZXIiXX0= */",
+  toString: _EMOTION_STRINGIFIED_CSS_ERROR__
+};
+
+const PodcastPlayer = ({
+  podcast,
+  onClose
+}) => {
+  const styles = _ref;
+  return Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])("div", {
+    css: styles,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 69,
+      columnNumber: 5
+    }
+  }, podcast && Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])("div", {
+    className: "modal",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 70,
+      columnNumber: 19
+    }
+  }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])("div", {
+    className: "clip",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 71,
+      columnNumber: 9
+    }
+  }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])("nav", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 72,
+      columnNumber: 11
+    }
+  }, onClose ? Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])("a", {
+    onClick: onClose,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 74,
+      columnNumber: 25
+    }
+  }, "< Volver") : Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+    href: `/channel/${podcast.channel.id}`,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 76,
+      columnNumber: 15
+    }
+  }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])("a", {
+    className: "close",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 77,
+      columnNumber: 17
+    }
+  }, "< Volver"))), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])("picture", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 83,
+      columnNumber: 11
+    }
+  }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])("div", {
+    style: {
+      backgroundImage: `url(${podcast.urls.image || podcast.channel.urls.logo_image.original})`
+    },
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 84,
+      columnNumber: 13
+    }
+  })), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])("div", {
+    className: "player",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 87,
+      columnNumber: 11
+    }
+  }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])("h3", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 88,
+      columnNumber: 13
+    }
+  }, podcast.title), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])("h6", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 89,
+      columnNumber: 13
+    }
+  }, podcast.channel.title), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])("audio", {
+    controls: true,
+    autoPlay: true,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 90,
+      columnNumber: 13
+    }
+  }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])("source", {
+    src: podcast.urls.high_mp3,
+    type: "audio/mpeg",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 91,
+      columnNumber: 15
+    }
+  }))))));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (PodcastPlayer);
+
+/***/ }),
+
 /***/ "./pages/_error.js":
 /*!*************************!*\
   !*** ./pages/_error.js ***!
@@ -2054,14 +2366,226 @@ Error.getInitialProps = ({
 
 /***/ }),
 
-/***/ 4:
-/*!*******************************!*\
-  !*** multi ./pages/_error.js ***!
-  \*******************************/
+/***/ "./pages/channel/[channel].js":
+/*!************************************!*\
+  !*** ./pages/channel/[channel].js ***!
+  \************************************/
+/*! exports provided: getServerSideProps, default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getServerSideProps", function() { return getServerSideProps; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _emotion_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @emotion/core */ "@emotion/core");
+/* harmony import */ var _emotion_core__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_emotion_core__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _components_Layout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/Layout */ "./components/Layout.js");
+/* harmony import */ var _components_ChannelGrid__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/ChannelGrid */ "./components/ChannelGrid.js");
+/* harmony import */ var _components_PodcastList__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../components/PodcastList */ "./components/PodcastList.js");
+/* harmony import */ var _PodcastPlayer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../PodcastPlayer */ "./pages/PodcastPlayer.js");
+/* harmony import */ var _error__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../_error */ "./pages/_error.js");
+var _jsxFileName = "/home/daniel/Documentos/Next-course/podcasts/pages/channel/[channel].js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+function _EMOTION_STRINGIFIED_CSS_ERROR__() { return "You have tried to stringify object returned from `css` function. It isn't supposed to be used directly (e.g. as value of the `className` prop), but rather handed to emotion so it can handle it (e.g. as value of `css` prop)."; }
+
+
+
+
+
+
+
+
+
+
+var _ref = false ? undefined : {
+  name: "3ugqql-styles",
+  styles: "& h1{font-weight:600;padding:15px;}& .banner{width:100%;padding-bottom:25%;background-position:50% 50%;background-size:cover;background-color:#aaa;}& .modal{position:fixed;top:0;left:0;right:0;bottom:0;z-index:99999;};label:styles;",
+  map: "/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2RhbmllbC9Eb2N1bWVudG9zL05leHQtY291cnNlL3BvZGNhc3RzL3BhZ2VzL2NoYW5uZWwvW2NoYW5uZWxdLmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQXdCb0IiLCJmaWxlIjoiL2hvbWUvZGFuaWVsL0RvY3VtZW50b3MvTmV4dC1jb3Vyc2UvcG9kY2FzdHMvcGFnZXMvY2hhbm5lbC9bY2hhbm5lbF0uanMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyB1c2VTdGF0ZSB9IGZyb20gXCJyZWFjdFwiO1xuaW1wb3J0IHsgY3NzLCBqc3gsIEdsb2JhbCB9IGZyb20gJ0BlbW90aW9uL2NvcmUnXG5pbXBvcnQgTGF5b3V0IGZyb20gJy4uLy4uL2NvbXBvbmVudHMvTGF5b3V0JztcbmltcG9ydCBDaGFubmVsR3JpZCBmcm9tICcuLi8uLi9jb21wb25lbnRzL0NoYW5uZWxHcmlkJztcbmltcG9ydCBQb2RjYXN0TGlzdCBmcm9tICcuLi8uLi9jb21wb25lbnRzL1BvZGNhc3RMaXN0JztcbmltcG9ydCBQb2RjYXN0UGxheWVyIGZyb20gJy4uL1BvZGNhc3RQbGF5ZXInO1xuaW1wb3J0IEVycm9yIGZyb20gJy4uL19lcnJvcic7XG5cbmNvbnN0IGNoYW5uZWwgPSAoeyBjaGFubmVsLCBhdWRpb0NsaXBzLCBzZXJpZXMsIHN0YXR1c0NvZGUgfSkgPT4ge1xuICBjb25zdCBbIG9wZW5Qb2RjYXN0LCBzZXRQb2RjYXN0IF0gPSB1c2VTdGF0ZShudWxsKTtcblxuICBjb25zdCBzZXRPcGVuUG9kY2FzdCA9IChldmVudCwgcG9kY2FzdCkgPT4ge1xuICAgIGV2ZW50LnByZXZlbnREZWZhdWx0KCk7XG4gICAgaWYoIGV2ZW50Lm1ldGFLZXkgfHwgZXZlbnQuY3RybEtleSB8fCBldmVudC5zaGlmdEtleSB8fCAoZXZlbnQubmF0aXZlRXZlbnQgJiYgZXZlbnQubmF0aXZlRXZlbnQud2hpY2ggPT09IDIpICl7XG4gICAgICByZXR1cm5cbiAgICB9XG4gICAgc2V0UG9kY2FzdChwb2RjYXN0KTtcbiAgfVxuXG4gIGNvbnN0IGNsb3NlUG9kY2FzdCA9IChldmVudCkgPT57XG4gICAgZXZlbnQucHJldmVudERlZmF1bHQoKTtcbiAgICBzZXRQb2RjYXN0KG51bGwpO1xuICB9XG5cbiAgY29uc3Qgc3R5bGVzID0gY3NzYFxuICAgICYgaDEge1xuICAgICAgZm9udC13ZWlnaHQ6IDYwMDtcbiAgICAgIHBhZGRpbmc6IDE1cHg7XG4gICAgfVxuICAgICYgLmJhbm5lciB7XG4gICAgICB3aWR0aDogMTAwJTtcbiAgICAgIHBhZGRpbmctYm90dG9tOiAyNSU7XG4gICAgICBiYWNrZ3JvdW5kLXBvc2l0aW9uOiA1MCUgNTAlO1xuICAgICAgYmFja2dyb3VuZC1zaXplOiBjb3ZlcjtcbiAgICAgIGJhY2tncm91bmQtY29sb3I6ICNhYWE7XG4gICAgfVxuXG4gICAgJiAubW9kYWwge1xuICAgICAgcG9zaXRpb246IGZpeGVkO1xuICAgICAgdG9wOiAwO1xuICAgICAgbGVmdDogMDtcbiAgICAgIHJpZ2h0OiAwO1xuICAgICAgYm90dG9tOiAwO1xuICAgICAgei1pbmRleDogOTk5OTk7XG4gICAgfVxuXHRcdFxuICBgO1xuICBpZiggc3RhdHVzQ29kZSAhPSAyMDApIHJldHVybiA8RXJyb3Igc3RhdHVzQ29kZT17c3RhdHVzQ29kZX0gLz5cblxuICByZXR1cm4oXG4gICAgPExheW91dCB0aXRsZT17Y2hhbm5lbC50aXRsZX0+XG4gICAgICA8ZGl2IGNzcz17c3R5bGVzfT5cbiAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJiYW5uZXJcIiBzdHlsZT17eyBiYWNrZ3JvdW5kSW1hZ2U6IGB1cmwoJHtjaGFubmVsLnVybHMuYmFubmVyX2ltYWdlLm9yaWdpbmFsfSlgIH19IC8+XG4gICAgICAgIFxuICAgICAgICB7IG9wZW5Qb2RjYXN0ICYmIDxkaXYgY2xhc3NOYW1lPVwibW9kYWxcIj5cbiAgICAgICAgICA8UG9kY2FzdFBsYXllciBwb2RjYXN0PXtvcGVuUG9kY2FzdH0gb25DbG9zZT17Y2xvc2VQb2RjYXN0fSAgLz5cbiAgICAgICAgICA8L2Rpdj4gfVxuICAgICAgICBcbiAgICAgICAgPGgxPnsgY2hhbm5lbC50aXRsZSB9PC9oMT5cblxuICAgICAgICA8aDI+U2VyaWVzPC9oMj5cbiAgICAgICAgPENoYW5uZWxHcmlkIGNoYW5uZWxzPXtzZXJpZXN9Lz5cblxuICAgICAgICA8aDI+w5psdGltb3MgUG9kY2FzdHM8L2gyPlxuICAgICAgICA8UG9kY2FzdExpc3QgYXVkaW9DbGlwcz17YXVkaW9DbGlwc30gb25DbGlja1BvZGNhc3Q9e3NldE9wZW5Qb2RjYXN0fS8+XG5cbiAgICAgIDwvZGl2PlxuICAgIDwvTGF5b3V0PlxuICApXG59XG5cbmV4cG9ydCBhc3luYyBmdW5jdGlvbiBnZXRTZXJ2ZXJTaWRlUHJvcHMoeyBxdWVyeSwgcmVzIH0pIHtcblxuICBsZXQgY2hhbm5lbElkID0gcXVlcnkuY2hhbm5lbDtcblxuICB0cnl7XG4gICAgbGV0IFsgcmVxQ2hhbm5lbCwgcmVxQXVkaW9DbGlwcywgcmVxU2VyaWVzIF0gPSBhd2FpdCBQcm9taXNlLmFsbChbXG4gICAgICBmZXRjaChgaHR0cHM6Ly9hcGkuYXVkaW9ib29tLmNvbS9jaGFubmVscy8ke2NoYW5uZWxJZH1gKSxcbiAgICAgIGZldGNoKGBodHRwczovL2FwaS5hdWRpb2Jvb20uY29tL2NoYW5uZWxzLyR7Y2hhbm5lbElkfS9hdWRpb19jbGlwc2ApLFxuICAgICAgZmV0Y2goYGh0dHBzOi8vYXBpLmF1ZGlvYm9vbS5jb20vY2hhbm5lbHMvJHtjaGFubmVsSWR9L2NoaWxkX2NoYW5uZWxzYClcbiAgICBdKVxuXG4gICAgaWYoIHJlcUNoYW5uZWwuc3RhdHVzID49IDQwMCApe1xuICAgICAgcmVzLnN0YXR1c0NvZGUgPSByZXFDaGFubmVsLnN0YXR1c1xuICAgICAgcmV0dXJuIHsgcHJvcHM6IHsgY2hhbm5lbDogbnVsbCwgYXVkaW9DbGlwczogbnVsbCwgc2VyaWVzOiBudWxsLCBzdGF0dXNDb2RlOiByZXFDaGFubmVsLnN0YXR1cyB9fVxuICAgIH1cbiAgXG4gIFxuICAgIGxldCBkYXRhQ2hhbm5lbCA9IGF3YWl0IHJlcUNoYW5uZWwuanNvbigpO1xuICAgIGxldCBjaGFubmVsID0gZGF0YUNoYW5uZWwuYm9keS5jaGFubmVsXG4gICAgXG4gICAgbGV0IGRhdGFBdWRpb0NsaXBzID0gYXdhaXQgcmVxQXVkaW9DbGlwcy5qc29uKCk7XG4gICAgbGV0IGF1ZGlvQ2xpcHMgPSBkYXRhQXVkaW9DbGlwcy5ib2R5LmF1ZGlvX2NsaXBzXG4gIFxuICAgIGxldCBkYXRhU2VyaWVzID0gYXdhaXQgcmVxU2VyaWVzLmpzb24oKTtcbiAgICBsZXQgc2VyaWVzID0gZGF0YVNlcmllcy5ib2R5LmNoYW5uZWxzXG4gIFxuICAgIHJldHVybiB7IHByb3BzOiB7IGNoYW5uZWwsIGF1ZGlvQ2xpcHMsIHNlcmllcywgc3RhdHVzQ29kZTogMjAwIH0gfVxuICB9XG4gIGNhdGNoKGUpe1xuICAgIHJldHVybiB7IHByb3BzOiB7IGNoYW5uZWw6IG51bGwsIGF1ZGlvQ2xpcHM6IG51bGwsIHNlcmllczogbnVsbCwgc3RhdHVzQ29kZTogNTAzIH19XG4gIH1cblxuICBcbn1cblxuZXhwb3J0IGRlZmF1bHQgY2hhbm5lbDsiXX0= */",
+  toString: _EMOTION_STRINGIFIED_CSS_ERROR__
+};
+
+const channel = ({
+  channel,
+  audioClips,
+  series,
+  statusCode
+}) => {
+  const {
+    0: openPodcast,
+    1: setPodcast
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(null);
+
+  const setOpenPodcast = (event, podcast) => {
+    event.preventDefault();
+
+    if (event.metaKey || event.ctrlKey || event.shiftKey || event.nativeEvent && event.nativeEvent.which === 2) {
+      return;
+    }
+
+    setPodcast(podcast);
+  };
+
+  const closePodcast = event => {
+    event.preventDefault();
+    setPodcast(null);
+  };
+
+  const styles = _ref;
+  if (statusCode != 200) return Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])(_error__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    statusCode: statusCode,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 48,
+      columnNumber: 33
+    }
+  });
+  return Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])(_components_Layout__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    title: channel.title,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 51,
+      columnNumber: 5
+    }
+  }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])("div", {
+    css: styles,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 52,
+      columnNumber: 7
+    }
+  }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])("div", {
+    className: "banner",
+    style: {
+      backgroundImage: `url(${channel.urls.banner_image.original})`
+    },
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 53,
+      columnNumber: 9
+    }
+  }), openPodcast && Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])("div", {
+    className: "modal",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 55,
+      columnNumber: 26
+    }
+  }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])(_PodcastPlayer__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    podcast: openPodcast,
+    onClose: closePodcast,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 56,
+      columnNumber: 11
+    }
+  })), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])("h1", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 59,
+      columnNumber: 9
+    }
+  }, channel.title), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])("h2", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 61,
+      columnNumber: 9
+    }
+  }, "Series"), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])(_components_ChannelGrid__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    channels: series,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 62,
+      columnNumber: 9
+    }
+  }), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])("h2", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 64,
+      columnNumber: 9
+    }
+  }, "\xDAltimos Podcasts"), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])(_components_PodcastList__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    audioClips: audioClips,
+    onClickPodcast: setOpenPodcast,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 65,
+      columnNumber: 9
+    }
+  })));
+};
+
+async function getServerSideProps({
+  query,
+  res
+}) {
+  let channelId = query.channel;
+
+  try {
+    let [reqChannel, reqAudioClips, reqSeries] = await Promise.all([fetch(`https://api.audioboom.com/channels/${channelId}`), fetch(`https://api.audioboom.com/channels/${channelId}/audio_clips`), fetch(`https://api.audioboom.com/channels/${channelId}/child_channels`)]);
+
+    if (reqChannel.status >= 400) {
+      res.statusCode = reqChannel.status;
+      return {
+        props: {
+          channel: null,
+          audioClips: null,
+          series: null,
+          statusCode: reqChannel.status
+        }
+      };
+    }
+
+    let dataChannel = await reqChannel.json();
+    let channel = dataChannel.body.channel;
+    let dataAudioClips = await reqAudioClips.json();
+    let audioClips = dataAudioClips.body.audio_clips;
+    let dataSeries = await reqSeries.json();
+    let series = dataSeries.body.channels;
+    return {
+      props: {
+        channel,
+        audioClips,
+        series,
+        statusCode: 200
+      }
+    };
+  } catch (e) {
+    return {
+      props: {
+        channel: null,
+        audioClips: null,
+        series: null,
+        statusCode: 503
+      }
+    };
+  }
+}
+/* harmony default export */ __webpack_exports__["default"] = (channel);
+
+/***/ }),
+
+/***/ 3:
+/*!******************************************!*\
+  !*** multi ./pages/channel/[channel].js ***!
+  \******************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/daniel/Documentos/Next-course/podcasts/pages/_error.js */"./pages/_error.js");
+module.exports = __webpack_require__(/*! /home/daniel/Documentos/Next-course/podcasts/pages/channel/[channel].js */"./pages/channel/[channel].js");
 
 
 /***/ }),
@@ -2143,6 +2667,17 @@ module.exports = require("react-is");
 
 /***/ }),
 
+/***/ "slugify":
+/*!**************************!*\
+  !*** external "slugify" ***!
+  \**************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("slugify");
+
+/***/ }),
+
 /***/ "url":
 /*!**********************!*\
   !*** external "url" ***!
@@ -2155,4 +2690,4 @@ module.exports = require("url");
 /***/ })
 
 /******/ });
-//# sourceMappingURL=_error.js.map
+//# sourceMappingURL=[channel].js.map
